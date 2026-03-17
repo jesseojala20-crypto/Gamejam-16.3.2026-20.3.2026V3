@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 315880451
     locked: 0
+  - name: Fog
+    uniqueID: 3993179583
+    locked: 0
   - name: Default
     uniqueID: 352284891
     locked: 0
