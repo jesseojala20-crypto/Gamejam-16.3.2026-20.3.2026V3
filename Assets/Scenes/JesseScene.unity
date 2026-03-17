@@ -406,6 +406,7 @@ GameObject:
   - component: {fileID: 475011181}
   - component: {fileID: 475011180}
   - component: {fileID: 475011182}
+  - component: {fileID: 475011183}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -422,8 +423,8 @@ Transform:
   m_GameObject: {fileID: 475011178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89, y: 0.47, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 0.89, y: 0.4629, z: 0}
+  m_LocalScale: {x: 3, y: 2.9115, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 980182476}
@@ -560,6 +561,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &475011183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475011178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1695842d69b12364598339bc7be41004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &745849448
 GameObject:
   m_ObjectHideFlags: 0
