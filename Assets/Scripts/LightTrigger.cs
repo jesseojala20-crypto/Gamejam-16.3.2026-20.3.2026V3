@@ -1,16 +1,26 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal; // <--- THIS IS THE KEY
 
 public class LightTrigger : MonoBehaviour
 {
-    public Light arealight;
-    public float targetIntensity = 2.0f;
+    // Note: This must now say Light2D, not Light
+    public Light2D areaLight;
+    public float targetIntensity = 1.0f;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Something entered the trigger!");
         if (other.CompareTag("Player"))
         {
-            arealight.intensity = targetIntensity;
+            Debug.Log("2D Light Activated!");
+            areaLight.intensity = targetIntensity;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            areaLight.intensity = 0;
         }
     }
 }
