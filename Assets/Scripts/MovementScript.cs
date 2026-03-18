@@ -41,16 +41,4 @@ public class MovementScript : MonoBehaviour
         return Physics2D.OverlapCircle(groundcheck.position, 0.5f, groundlevel);
     }
 
-    private void Flip()
-    {
-        if (isfacingright && horizontal < 0 || !isfacingright && horizontal > 0)
-        {
-            isfacingright = !isfacingright;
-            Vector3 localscale = transform.localScale;
-            localscale.x *= -1f;
-            transform.localScale = localscale;
-
-        }
-    }
-
 }
