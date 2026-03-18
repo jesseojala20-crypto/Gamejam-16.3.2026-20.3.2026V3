@@ -5,7 +5,6 @@ public class MovementScript : MonoBehaviour
     private float horizontal;
     private float speed = 8f;
     private float jumpingpower = 16f;
-    private bool isfacingright = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundcheck;
@@ -25,8 +24,7 @@ public class MovementScript : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
-
-        Flip();
+        
     }
 
 
