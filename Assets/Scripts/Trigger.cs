@@ -13,10 +13,11 @@ public class Trigger : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
+            Debug.Log("Player has entered the trigger!");
             Destroy(other.gameObject);
         }
     }
