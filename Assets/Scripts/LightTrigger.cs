@@ -5,7 +5,12 @@ public class LightTrigger : MonoBehaviour
 {
     // Note: This must now say Light2D, not Light
     public Light2D areaLight;
-    public float targetIntensity = 1.0f;
+    public float targetIntensity = 0.5f;
+
+    void Start()
+    {
+        print(this.gameObject.name);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,14 +18,6 @@ public class LightTrigger : MonoBehaviour
         {
             Debug.Log("2D Light Activated!");
             areaLight.intensity = targetIntensity;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            areaLight.intensity = 0;
         }
     }
 }
