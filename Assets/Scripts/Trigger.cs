@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Trigger : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Trigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player has entered the trigger!");
-            Destroy(other.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
